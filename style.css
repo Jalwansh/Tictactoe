@@ -1,0 +1,103 @@
+body {
+  margin: 0;
+  font-family: 'Orbitron', Arial, sans-serif;
+  background: linear-gradient(135deg, #1a0033 0%, #2d004d 100%);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#home-screen, #game-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: #fff;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  text-shadow: 0 0 20px #ff00cc, 0 0 40px #3333ff;
+}
+
+button {
+  background: #ff00cc;
+  color: #fff;
+  border: none;
+  border-radius: 30px;
+  padding: 1rem 2.5rem;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 0 20px #ff00cc, 0 0 40px #3333ff;
+  transition: background 0.2s;
+}
+button:hover {
+  background: #3333ff;
+}
+
+#status {
+  color: #fff;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-shadow: 0 0 10px #ff00cc, 0 0 20px #3333ff;
+}
+
+#board {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-template-rows: repeat(3, 80px);
+  gap: 10px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 20px;
+  box-shadow: 0 0 40px #3333ff;
+  margin-bottom: 1.5rem;
+}
+
+.cell {
+  width: 80px;
+  height: 80px;
+  background: rgba(20, 0, 40, 0.7);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  cursor: pointer;
+  user-select: none;
+  box-shadow: 0 0 10px #ff00cc, 0 0 20px #3333ff;
+  transition: background 0.2s;
+}
+.cell:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.x {
+  color: #33aaff;
+  text-shadow: 0 0 20px #33aaff, 0 0 40px #fff;
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+.o {
+  color: #ff3366;
+  text-shadow: 0 0 20px #ff3366, 0 0 40px #fff;
+  font-family: 'Orbitron', Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+  #board {
+    grid-template-columns: repeat(3, 60px);
+    grid-template-rows: repeat(3, 60px);
+    gap: 7px;
+  }
+  .cell {
+    width: 60px;
+    height: 60px;
+    font-size: 2.2rem;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+}
